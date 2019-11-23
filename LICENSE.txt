@@ -1,0 +1,28 @@
+Copyright (c) 2012-2019 Zerone216
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software to use it for the purpose of evaluating the software prior to
+purchase.
+
+Extended use of Zerone Pro requires a license, which can be purchased on
+https://monokai.pro. Any person who has purchased a license from Zerone is
+granted use of Zerone Pro on any number of computers that belongs to that
+person.
+
+Zerone Pro may not be sub-licensed, resold, or redistributed.
+
+You may not loan, rent, transfer or grant any rights to Zerone Pro contained
+herein, or any compilation, derivative or collective work containing Zerone Pro
+to any other person or organization without the prior written consent of
+Zerone.
+
+Zerone Pro is copyrighted by Zerone. No title or intellectual property rights
+in Zerone Pro are transferred to you. Zerone retains all rights not expressly
+granted by this license.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
