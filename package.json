@@ -1,0 +1,19 @@
+{
+	"name": "theme-zerone-pro-vscode",
+	"displayName": "%displayName%",
+    "description": "%description%",
+	"publisher": "Zerone216",
+	"version": "1.0.1",
+	"engines": {
+		"vscode": "*"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Zerone Dark Pro",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Zerone-Dark-Pro.json"
+			}
+		],
+	}
+}
