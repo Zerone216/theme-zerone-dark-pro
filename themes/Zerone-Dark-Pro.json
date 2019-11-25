@@ -3,21 +3,20 @@
 	"name": "Vscode Dark (C/C++)",
 	"type": "hc",
 	"colors": {
+		"contrastBorder": "#0873ff",
+        
 		"activityBar.background": "#000000",
 		"activityBar.foreground": "#1af1f1",
 		"activityBar.inactiveForeground": "#e9e9e9",
-		"activityBarBadge.background": "#00ffdd",
-		"activityBarBadge.foreground": "#000000",
-		"contrastBorder": "#0890ff",
+		"activityBarBadge.background": "#1af6d9",
+        "activityBarBadge.foreground": "#000000",
+		
 		"editor.background": "#000000",
 		"editor.foreground": "#ffffff",
 		"editor.selectionBackground": "#ffffff",
 		"editorBracketMatch.background": "#ffc74e",
 		"editorBracketMatch.border": "#000000",
-		"focusBorder": "#1ce0d0",
-		"selection.background": "#008000",
-		"statusBarItem.remoteBackground": "#00000000",
-		"titleBar.activeBackground": "#020202",
+		"focusBorder": "#0873ff",
 		"activityBar.border": "#0873ff",
 		"activityBar.dropBackground": "#ffffff1f",
 		"badge.background": "#000000",
@@ -68,7 +67,6 @@
 		"editor.wordHighlightBorder": "#1ce0d0",
 		"editor.wordHighlightStrongBorder": "#1ce0d0",
 		"editorActiveLineNumber.foreground": "#1ce0d0",
-		//"editorLineNumber.foreground": "#1ce0d0",
 		"editorCodeLens.foreground": "#999999",
 		"editorCursor.foreground": "#ffffff",
 		"editorError.border": "#e47777cc",
@@ -216,6 +214,8 @@
 		"sideBar.border": "#0873ff",
 		"sideBar.dropBackground": "#ffffff4d",
 		"sideBarSectionHeader.border": "#0873ff",
+		"selection.background": "#008000",
+		//"statusBar.background": "#000000",
 		"statusBar.border": "#0873ff",
 		"statusBar.debuggingBackground": "#cc6633",
 		"statusBar.debuggingBorder": "#0873ff",
@@ -228,7 +228,8 @@
 		"statusBarItem.prominentBackground": "#00000080",
 		"statusBarItem.prominentForeground": "#ffffff",
 		"statusBarItem.prominentHoverBackground": "#0000004d",
-		"statusBarItem.remoteForeground": "#000000",
+		//"statusBarItem.remoteForeground": "#ffffff",
+		"statusBarItem.remoteBackground": "#00000000",
 		"symbolIcon.arrayForeground": "#ffffff",
 		"symbolIcon.booleanForeground": "#ffffff",
 		"symbolIcon.classForeground": "#ee9d28",
@@ -265,7 +266,6 @@
 		"tab.activeBackground": "#000000",
 		"tab.activeForeground": "#ffffff",
 		"tab.border": "#0873ff",
-		"tab.hoverBackground": "#055cff",
 		"tab.inactiveForeground": "#ffffff",
 		"tab.inactiveModifiedBorder": "#ffffff",
 		"tab.unfocusedActiveBackground": "#000000",
@@ -301,72 +301,362 @@
 		"textSeparator.foreground": "#000000",
 		"titleBar.activeForeground": "#ffffff",
 		"titleBar.border": "#0873ff",
+		"titleBar.inactiveBackground": "#ffffff",
+		"titleBar.inactiveForeground": "#000000",
+		"titleBar.activeBackground": "#020202",
 		"tree.indentGuidesStroke": "#a9a9a9",
 		"window.activeBorder": "#0873ff",
 		"window.inactiveBorder": "#0873ff",
+		"statusBar.background": "#000000",
+		"statusBar.noFolderBackground": "#050505",
+        "statusBarItem.remoteForeground": "#ffffff"
 	},
-  "tokenColors": [
+	"tokenColors": [
 		{
+			"scope":"",
+			"settings": {
+				"background": "#ffffff",
+				"foreground": "#000000"
+			}
+		},
+		{
+			"name": "Comment", //注释
 			"scope": [
-				"meta.embedded",
-				"source.groovy.embedded"
+				"comment",
+				"comment.line",
+				"comment.block",
+				"punctuation.definition.comment"
 			],
 			"settings": {
-				"foreground": "#D4D4D4"
+				"fontStyle": "italic",
+				"foreground": "#56ff88"
 			}
 		},
 		{
-			"scope": "emphasis",
+			"name": "Character",
+			"scope": [
+				"constant",
+				"constant.character"
+			],
 			"settings": {
-				"fontStyle": "italic"
+				"foreground": "#008000"
 			}
 		},
 		{
-			"scope": "strong",
+			"name": "Class",
+			"scope": [
+				"entity.name.type",
+				"entity.other.inherited-class",
+				"support.class"
+			],
 			"settings": {
-				"fontStyle": "bold"
+				"foreground": "#25257c"
+			}
+		},
+		
+		{
+			"name": "Function",
+			"scope": [
+				"entity.name.function",
+				"support.function"
+			],
+			"settings": {
+				"foreground": "#44a5ff"
 			}
 		},
 		{
-			"scope": "header",
+			"name": "Keyword",
+			"scope": [
+				"keyword",
+				"storage"
+			],
 			"settings": {
-				"foreground": "#000080"
+				"fontStyle": "bold",
+				"foreground": "#5b5be9"
 			}
 		},
 		{
-			"scope": "comment",                             /*         */
+			"name": "Number",
+			"scope": [
+				"constant.numeric"
+			],
 			"settings": {
-				"foreground": "#04a341"
+				"foreground": "#ff3737"
 			}
 		},
 		{
-			"scope": "constant.language",                   /*         */
+			"name": "Operator",
+			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#569cd6"
+				"foreground": "#ff9d2d"
+			}
+		},
+		{
+			"name": "Parameter",
+			"scope": "variable.parameter",
+			"settings": {
+				"fontStyle": "underline",
+				"foreground": "#1bffe1"
+			}
+		},
+		{
+			"name": "Punctuation",
+			"scope": "punctuation",
+			"settings": {
+				"foreground": "#1fa135"
+			}
+		},
+		{
+			"name": "String",
+			"scope": "string",
+			"settings": {
+				"foreground": "#853da7"
+			}
+		},
+		{
+			"name": "Type",
+			"scope": [
+				"storage.type",
+				"support.type"
+			],
+			"settings": {
+				"fontStyle": "",
+				"foreground": "#6464f0"
+			}
+		},
+		{
+			"name": "Variable",
+			"scope": [
+				"support.variable",
+				"variable"
+			],
+			"settings": {
+				"foreground": "#5affe9"
+			}
+		},
+		///////////////////////////////////comment/////////////////////////////////
+		{
+			"scope":"comment", //注释
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#36fa78f1"
 			}
 		},
 		{
 			"scope": [
-				"constant.numeric"                          /* 数字 */
+				"comment.line", //单行注释
+				"comment.block",//多行注释块
+				"comment.block.documentation", //用于文档的多行注释
 			],
 			"settings": {
-				"foreground": "#ff98dd"
+				"fontStyle": "italic",
+				"foreground": "#00fd54f1"
 			}
 		},
+		///////////////////////////////////constant/////////////////////////////////
 		{
-			"scope": "keyword.other.unit",                  /* 数字前缀 */
+			"scope":"constant", //常量
 			"settings": {
-				"foreground": "#ff98dd"
+				"fontStyle": "italic",
+				"foreground": "#fa3636f1"
 			}
 		},
 		{
-			"scope": "constant.regexp",                     /* 常量表达式 */
+			"scope": [
+				"constant.character" //字符常量
+			],
 			"settings": {
-				"foreground": "#ffffff"
+				"fontStyle": "italic",
+				"foreground": "#ff0000f1"
 			}
 		},
 		{
-			"scope": "entity.name.tag",
+			"scope": [
+				"constant.character.escape", // 字符串中的字符转义符，例如\n和\x20
+				"constant.numeric",          // 数字
+				"emphasis"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#fb621bf1"
+			}
+		},
+		{
+			"scope": [
+				"constant.numeric"  //数字常量
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#ff0f0ff1"
+			}
+		},
+		{
+			"scope": [
+				"constant.rgb-value" //RGB数值
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#ff3737"
+			}
+		},
+		{
+			"scope": [
+				"constant.regexp" //
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#ff3737"
+			}
+		},
+		{
+			"scope": "constant.language", //语言中内置的常量，例如布尔值和空值
+			"settings": {
+				"foreground": "#f58f8f"
+			}
+		},
+		{
+			"scope": "constant.sha.git-rebase",
+			"settings": {
+				"foreground": "#c1e7ad"
+			}
+		},
+		{
+			"scope": [
+				"constant.other" //
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#ff2f2f"
+			}
+		},
+		{
+			"scope": [
+				"constant.other.placeholder" //格式化占位符，如那些用于printf()，例如%s
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#df2201"
+			}
+		},
+		///////////////////////////////////entity/////////////////////////////////
+		{
+			"scope": "entity", //
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#3b7ba7"
+			}
+		},
+		{
+			"scope": "entity.name", //将实体作用域分配给代码和标记中的数据结构，类型和其他唯一可识别的构造的名称
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#2873a5"
+			}
+		},
+		{
+			"scope": [ //类型别名(alias)
+				"entity.name.class",
+				"entity.name.struct",
+				"entity.name.enum",
+				"entity.name.union",
+				"entity.name.trait",
+				"entity.name.interface",
+				"entity.name.impl",
+				"entity.name.type"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#2497e4"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.class.forward-decl" //forward-decl上面的变体在诸如C和C ++的语言中使用
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#38aaf6"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.function", //函数
+				"entity.name.function.constructor", //构造函数
+				"entity.name.function.destructor" //析构函数
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#1c73ad"
+			}
+		},
+		{
+			"scope": "entity.name.function.operator", //运算符重载
+			"settings": {
+				"foreground": "#adadad"
+			}
+		},
+		{
+			"scope": "entity.name.function.preprocessor", // 宏定义标签，包括函数和常量
+			"settings": {
+				"foreground": "#2bbcff"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.namespace" //命名空间，包和模块
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#1d5e8a"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.constant" //常量,具体取决于语言语义。此范围通常包含在符号列表和索引中
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#337bac"
+			}
+		},
+		{
+			"scope": "entity.name.operator.custom-literal",
+			"settings": {
+				"foreground": "#DADADA"
+			}
+		},
+		{
+			"scope": "entity.name.operator.custom-literal.number",
+			"settings": {
+				"foreground": "#B5CEA8"
+			}
+		},
+		{
+			"scope": "entity.name.operator.custom-literal.string",
+			"settings": {
+				"foreground": "#D69D85"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.label" //类似goto的构造的标签
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#ec7e6a"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.section" //标记语言（例如Markdown和Textile）的标题名
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#4164d6"
+			}
+		},
+		{
+			"scope": "entity.name.tag",//HTML和XML标签
 			"settings": {
 				"foreground": "#569cd6"
 			}
@@ -378,9 +668,21 @@
 			}
 		},
 		{
-			"scope": "entity.other.attribute-name",
+			"scope": [
+				"entity.other"
+			],
 			"settings": {
-				"foreground": "#9cdcfe"
+				"fontStyle": "bold",
+				"foreground": "#7894a7"
+			}
+		},
+		{
+			"scope": [
+				"entity.other.attribute-name" //HTML，CSS和XML使用以下标记属性名称
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#6988cc"
 			}
 		},
 		{
@@ -400,9 +702,109 @@
 			}
 		},
 		{
-			"scope": "invalid",
+			"scope": [
+				"entity.other.inherited-class" //列为继承的类或已实现的接口/特征的类，接口和特征名称
+			],
 			"settings": {
-				"foreground": "#f44747"
+				"fontStyle": "bold",
+				"foreground": "#7894a7"
+			}
+		},
+		
+		///////////////////////////////////invalid/////////////////////////////////
+		{
+			"scope": "invalid", //在特定上下文中非法的元素
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#a63aff"
+			}
+		},
+		{
+			"scope": "invalid.illegal", //在特定上下文中非法的元素
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#a853ee"
+			}
+		},
+		{
+			"scope": "invalid.deprecated", //不推荐使用的元素的作用域
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#805b9e"
+			}
+		},
+		///////////////////////////////////keyword/////////////////////////////////
+		{
+			"scope": "keyword", //关键字
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#4a62ee"
+			}
+		},
+		{
+			"scope": "keyword.control",// 预编译条件判断，关键字
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#4f68f5"
+			}
+		},
+		{
+			"scope": [
+				"keyword.control.conditional",
+				"keyword.control.import",
+			], 
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#677beb"
+			}
+		},
+		{
+			"scope": "keyword.control.directive",  //
+			"settings": {
+				"foreground": "#ffee06"
+			}
+		},
+		{
+			"scope": "keyword.operator", //运算符，“+,-,*,/,=,%”
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#f7bd51"
+			}
+		},
+		{
+			"scope": [
+				"keyword.operator.new", //
+				"keyword.operator.delete",
+				"keyword.operator.sizeof",
+				"keyword.operator.expression",
+				"keyword.operator.cast",
+				"keyword.operator.instanceof",
+				"keyword.operator.logical", // 逻辑运算符
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#0062ff"
+			}
+		},
+		{
+			"scope": "keyword.other", //
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#5567b8"
+			}
+		},
+		{
+			"scope": "keyword.other.unit",                  // 数字前缀 
+			"settings": {
+				"foreground": "#ff98dd"
+			}
+		},
+		///////////////////////////////////markup/////////////////////////////////
+		{
+			"scope": "markup", //标记作用域用于内容，而不是代码。这包括Markdown和Textile等语法
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#3fd5f0"
 			}
 		},
 		{
@@ -449,6 +851,89 @@
 				"foreground": "#569cd6"
 			}
 		},
+		///////////////////////////////////punctuation/////////////////////////////////
+		{
+			"scope": "punctuation", //所有标点符号
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#ffffff"
+			}
+		},
+		{
+			"scope": "punctuation.separator", //所有分隔符，逗号，冒号等
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#d8d8d8f1"
+			}
+		},
+		{
+			"scope": "punctuation.separator.continuation", //行连续字符
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#ffe798f1" 
+			}
+		},
+		{
+			"scope": "punctuation.terminator", //所有终止符，分号或其他语句终止符等
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#fffffff1"
+			}
+		},
+		{
+			"scope": "punctuation.accessor", //成员访问，范围解析或类似的构造
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#f0d0d0f1"
+			}
+		},
+		{
+			"scope": [
+				"punctuation.definition" //所有定义标识，大中小括号，引号，注释标识
+			], 
+			"settings": {
+				"foreground": "#e0d8a9f1"
+			}
+		},
+		{
+			"scope": [
+				"punctuation.definition.comment" //注释标识符"//"或者“/*”和“*\/”
+			], 
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#005c14f1"
+			}
+		},
+		{
+			"scope": [
+				"punctuation.definition.string.begin", //字符串开始的引号
+				"punctuation.definition.string.end" //字符串结束的引号
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#f0fa67f1"
+			}
+		},
+		{
+			"name": "String interpolation",
+			"scope": [
+				"punctuation.definition.template-expression.begin",
+				"punctuation.definition.template-expression.end",
+				"punctuation.section.embedded"
+			],
+			"settings": {
+				"foreground": "#04ff81"
+			}
+		},
+		{
+			"scope": [
+				"punctuation.section.embedded.begin.php",
+				"punctuation.section.embedded.end.php"
+			],
+			"settings": {
+				"foreground": "#569cd6"
+			}
+		},
 		{
 			"scope": "punctuation.definition.quote.begin.markdown",
 			"settings": {
@@ -474,22 +959,118 @@
 				"foreground": "#808080"
 			}
 		},
+		///////////////////////////////////meta/////////////////////////////////
 		{
-			"scope": "meta.preprocessor",         /* 宏定义参数 */
+			"scope": "meta", //元范围用于范围较大的代码或标记部分，通常包含多个更具体的范围
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#95fbe5f1"
+			}
+		},
+		{
+			"scope": [  //数据结构的完整内容,包括所有元素，例如名称，继承详细信息和正文
+				"meta.class",
+				"meta.struct",
+				"meta.enum",
+				"meta.union",
+				"meta.trait",
+				"meta.interface",
+				"meta.impl",
+				"meta.type"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#7cd1bff1"
+			}
+		},
+		{
+			"scope": [ // 函数定义与声明的参数以及括号；宏定义代码段的参数及括号
+				"meta.function",
+				"meta.function.parameters",
+				"meta.function.return-type"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#6ec8a3f1"
+			}
+		},
+		{
+			"scope": [
+				"meta.function-call" // 函数调用的括号
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#99aec0f1"
+			}
+		},
+		{
+			"scope": "meta.namespace",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#60ccccf1"
+			}
+		},
+		{ 
+			"scope": "meta.block", 
 			"settings": {
 				"foreground": "#ffffff"
 			}
 		},
 		{
-			"scope": "meta.preprocessor.string",  /* 预处理字符串  */
+			"scope": "meta.preprocessor", //如C之类的语言的预处理器语句，“#if”等的括号；宏定义的参数括号及代码段,
 			"settings": {
-				"foreground": "#D69D85"
+				"fontStyle": "italic",
+				"foreground": "#9974fff1"
 			}
 		},
 		{
-			"scope": "meta.preprocessor.numeric", /* 预处理数字 */
+			"scope": "meta.preprocessor.string",  // 预处理字符串  
 			"settings": {
-				"foreground": "#ff98dd"
+				"foreground": "#fa5c18"
+			}
+		},
+		{
+			"scope": "meta.preprocessor.numeric", // 预处理数字
+			"settings": {
+				"foreground": "#f3544e"
+			}
+		},
+		{
+			"scope": [ //用于修改类，方法或函数的行为或实现的注释，属性和修饰符语句
+				"meta.annotation",
+				"meta.annotation.identifier",
+				"meta.annotation.parameters"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#b6b1f5f1"
+			}
+		},
+		{
+			"scope": [
+				"meta.embedded",
+				"source.groovy.embedded"
+			],
+			"settings": {
+				"foreground": "#D4D4D4"
+			}
+		},
+		{
+			"scope": [ 
+				"meta.string" //字符串的整体以及所有标点，前缀，后缀和插值
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#7973d3f1"
+			}
+		},
+		{
+			"name": "Reset JavaScript string interpolation expression",
+			"scope": [
+				"meta.template.expression"
+			],
+			"settings": {
+				"foreground": "#cfaeae"
 			}
 		},
 		{
@@ -504,28 +1085,121 @@
 				"foreground": "#569cd6"
 			}
 		},
+		///////////////////////////////////source/////////////////////////////////
 		{
-			"scope": "storage",
+			"scope": "source", //特定于语言的变体通常应用于整个源代码文件
 			"settings": {
-				"foreground": "#25baff"
+				"fontStyle": "italic",
+				"foreground": "#fffffff1"
+			}
+		},
+		///////////////////////////////////storage/////////////////////////////////
+		{
+			"scope": "storage", //存储类型
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#2982f6f1"
 			}
 		},
 		{
-			"scope": "storage.type",      /* 变量类型关键字， void, int, char,struct, union */
+			"scope": "storage.type", //包括int，bool和char
 			"settings": {
-				"foreground": "#25baff"
+				"fontStyle": "italic",
+				"foreground": "#2982f6f1"
 			}
 		},
 		{
-			"scope": "storage.modifier",  /* 变量限定修饰关键字，volatile, const */
+			"scope": [ //函数的关键字
+				"storage.type.function keyword.declaration.function"
+			], 
 			"settings": {
-				"foreground": "#fff000"
+				"fontStyle": "bold",
+				"foreground": "#48b6fff1"
 			}
 		},
 		{
-			"scope": "string",
+			"scope": [  //类，结构，接口等的关键字
+				"torage.type.class keyword.declaration.class",
+				"torage.type.struct keyword.declaration.struct",
+				"torage.type.enum keyword.declaration.enum",
+				"torage.type.union keyword.declaration.union",
+				"torage.type.trait keyword.declaration.trait",
+				"torage.type.interface keyword.declaration.interface",
+				"torage.type.impl keyword.declaration.impl",
+				"torage.type.type keyword.declaration.type",
+			],
 			"settings": {
-				"foreground": "#D69D85"
+				"fontStyle": "italic",
+				"foreground": "#00fddbf1"
+			}
+		},
+		{
+			"scope": "storage.modifier", //影响变量，函数或数据结构的存储的关键字,包括static，inline，const，public和private
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#00eafff1"
+			}
+		},
+		///////////////////////////////////string/////////////////////////////////
+		{
+			"scope": "string", //字符串
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#5170f8f1"
+			}
+		},
+		{
+			"scope": "string.quoted", //加引号的字符串
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#d271fff1"
+			}
+		},
+		{
+			"scope": [ //基本字符串
+				"string.quoted.single",
+				"string.quoted.double",
+				"string.quoted.triple"                    
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#ff9751"
+			}
+		},
+		{
+			"scope": [ //使用非常规引号的字符串（例如<，>带有C导入的字符串）
+				"string.quoted.other"                  
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#da97eef1"
+			}
+		},
+		{
+			"scope": [ //未加引号的字符串（例如在Shell和批处理文件中）
+				"string.unquoted"                  
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#c917fff1"
+			}
+		},
+		{
+			"scope": [ //正则表达式
+				"string.regexp"                  
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#ac8ab6f1"
+			}
+		},
+		{
+			"scope": [ //当字符串包含插值代码（例如变量或表达式）
+				"string.interpolation"                  
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#e4e13ff1"
 			}
 		},
 		{
@@ -541,29 +1215,50 @@
 			}
 		},
 		{
-			"scope": "string.regexp",
+			"scope": [
+				"string.other"               
+			],
 			"settings": {
-				"foreground": "#d16969"
+				"fontStyle": "italic",
+				"foreground": "#ff58dbf1"
+			}
+		},
+		///////////////////////////////////support/////////////////////////////////
+	   {
+			"scope": "support", //基本框架库提供的元素
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#726ffff1"
+			}
+		}, 
+		{
+			"scope": [ //基本框架库的类和类型，有效地确定了所有用户构造的范围
+				"support.type",
+				"support.type.property-name",
+				"support.type.vendored.property-name",
+				"support.class"
+			], 
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#6178f8f1"
 			}
 		},
 		{
-			"name": "String interpolation",
-			"scope": [
-				"punctuation.definition.template-expression.begin",
-				"punctuation.definition.template-expression.end",
-				"punctuation.section.embedded"
-			],
+			"scope": [ //
+				"support.constant", // 库常量
+				"support.function",  // 库函数
+				"support.module",   //库模块
+				"support.variable"
+			], 
 			"settings": {
-				"foreground": "#569cd6"
+				"fontStyle": "bold",
+				"foreground": "#ff664bf1"
 			}
 		},
 		{
-			"name": "Reset JavaScript string interpolation expression",
-			"scope": [
-				"meta.template.expression"
-			],
+			"scope": "support.function.git-rebase",
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#9cdcfe"
 			}
 		},
 		{
@@ -576,60 +1271,85 @@
 				"source.coffee.embedded"
 			],
 			"settings": {
-				"foreground": "#9cdcfe"
+				"foreground": "#54c1fb"
 			}
 		},
+		///////////////////////////////////text/////////////////////////////////
 		{
-			"scope": "keyword",                     /* 关键字 */
+			"scope": "text", 
 			"settings": {
-				"foreground": "#fff000"
+				"fontStyle": "italic",
+				"foreground": "#fffffff1"
 			}
 		},
 		{
-			"scope": "keyword.control",            /* 关键字 if...else, for, while */
+			"scope": "text.html", 
 			"settings": {
-				"foreground": "#fff000"
+				"fontStyle": "italic",
+				"foreground": "#bbfff6f1"
 			}
 		},
 		{
-			"scope": "keyword.operator",            /* 操作符 */
-			"settings": {           
-				"foreground": "#ffa90a",
+			"scope": "text.xml", 
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#7d8aa1f1"
+			}
+		},
+		///////////////////////////////////variable/////////////////////////////////
+		{
+			"scope": "variable", //基本框架提供的元素
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#00ffddf1"
+			}
+		},
+		{
+			"scope": "variable.parameter", // 函数形参
+			"settings": {
 				"fontStyle": "bold",
+				"foreground": "#00ffb3f1"
 			}
 		},
 		{
-			"scope": [
-				"keyword.operator.new",            /* 关键字 */
-				"keyword.operator.expression",
-				"keyword.operator.cast",
-				"keyword.operator.sizeof",
-				"keyword.operator.instanceof",
-				"keyword.operator.logical.python"
-			],
+			"scope": "variable.function", // 函数和方法名称的作用域
 			"settings": {
-				"foreground": "#fff000"
+				"fontStyle": "bold",
+				"foreground": "#02a32bf1"
 			}
 		},
 		{
-			"scope": [
-				"punctuation.section.embedded.begin.php",
-				"punctuation.section.embedded.end.php"
-			],
+			"scope": "variable.annotation", // 作为注释一部分的标识符中的最终标签
 			"settings": {
-				"foreground": "#569cd6"
+				"fontStyle": "bold",
+				"foreground": "#9e28ecf1"
 			}
 		},
 		{
-			"scope": "support.function.git-rebase",
+			"scope": "variable.language", //由指定的语言保留的变量名，如this，self，super
 			"settings": {
-				"foreground": "#9cdcfe"
+				"foreground": "#3cd2ff"
 			}
 		},
 		{
-			"scope": "constant.sha.git-rebase",
+			"scope": "variable.other", // 
 			"settings": {
-				"foreground": "#b5cea8"
+				"fontStyle": "italic",
+				"foreground": "#04fff2"
+			}
+		},
+		{
+			"scope": "variable.other.enummember", // enmu 变量
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#ff0f87"
+			}
+		},
+		{
+			"scope": "variable.other.property", // 结构体成员引用
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#0cff04"
 			}
 		},
 		{
@@ -643,114 +1363,24 @@
 				"foreground": "#d4d4d4"
 			}
 		},
+		///////////////////////////////////others/////////////////////////////////
 		{
-			"name": "this.self",
-			"scope": "variable.language",                /*  */
+			"scope": "emphasis",
 			"settings": {
-				"foreground": "#3cd2ff"
+				"fontStyle": "italic"
 			}
 		},
 		{
-			"scope": "entity.name",
+			"scope": "strong",
 			"settings": {
-				"foreground": "#C8C8C8"
+				"fontStyle": "bold"
 			}
 		},
 		{
-			"scope": "keyword.control.directive",       /* 预处理关键字 */
+			"scope": "header",
 			"settings": {
-				"foreground": "#ffee06"
+				"foreground": "#000080"
 			}
-		},
-		{
-			"scope": "variable",                         /* 变量 */
-			"settings": {
-				"foreground": "#ffffff"
-			}
-		},
-		{
-			"scope": "entity.name.function",             /* 函数名 */
-			"settings": {
-				"foreground": "#ffffff"
-			}
-		},
-		{
-			"scope": "entity.name.function.operator",
-			"settings": {
-				"foreground": "#B4B4B4"
-			}
-		},
-		{
-			"scope": "entity.name.function.preprocessor", /* 宏定义标签，包括函数和常量 */
-			"settings": {
-				"foreground": "#90dcff"
-			}
-		},
-		{
-			"scope": "entity.name.label",
-			"settings": {
-				"foreground": "#bebebe"
-			}
-		},
-		{
-			"scope": "entity.name.namespace",
-			"settings": {
-				"foreground": "#C8C8C8"
-			}
-		},
-		{
-			"scope": [
-				"entity.name.type", /* 结构体别名（alias） */
-				"entity.name.class"
-			],
-			"settings": {
-				"foreground": "#25baff"
-			}
-		},
-		{
-			"scope": "entity.name.operator.custom-literal",
-			"settings": {
-				"foreground": "#DADADA"
-			}
-		},
-		{
-			"scope": "entity.name.operator.custom-literal.number",
-			"settings": {
-				"foreground": "#B5CEA8"
-			}
-		},
-		{
-			"scope": "entity.name.operator.custom-literal.string",
-			"settings": {
-				"foreground": "#D69D85"
-			}
-		},
-		{
-			"scope": [
-				"keyword.operator.new",
-				"keyword.operator.delete"
-			],
-			"settings": {
-				"foreground": "#569CD6"
-			}
-		},
-		{
-			"scope": "variable.other.enummember", /* eum 变量 */
-			"settings": {
-				"foreground": "#ff95ca"
-			}
-		},
-		{
-			"scope": "variable.other.property", /* 结构体成员引用 */
-			"settings": {
-				"foreground": "#22eb4d"
-			}
-		},
-		{
-			"scope": "variable.parameter", /* 函数形参 */
-			"settings": {
-				"foreground": "#ffffff"
-			}
-		}
+		}, 
 	]
 }
